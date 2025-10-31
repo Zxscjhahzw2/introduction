@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目图片展示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        dark: '#1D2129',
+                        light: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .project-card {
+                @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
+            }
+            .project-img-container {
+                @apply bg-light aspect-video flex items-center justify-center overflow-hidden;
+            }
+            .project-img {
+                @apply w-full h-full object-cover transition-transform duration-500 hover:scale-105;
+            }
+            .project-title {
+                @apply text-dark font-semibold text-lg p-4 text-center;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 页面头部 -->
+    <header class="bg-primary text-white py-8 px-4 shadow-lg">
+        <div class="container mx-auto">
+            <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-center">项目图片展示</h1>
+            <p class="text-center mt-2 opacity-90">各类技术与设计项目合集</p>
+        </div>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- 自动行驶小车 -->
+            <div class="md:col-span-2">
+                <div class="project-card">
+                    <div class="project-title">自动行驶小车</div>
+                    <div class="project-img-container">
+                        <img src="./7e23875a8ea5a982f0d6f426bd07bd8b_720.jpg" alt="自动行驶小车项目图片" class="project-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- QT游戏 -->
+            <div class="md:col-span-2">
+                <div class="project-card">
+                    <div class="project-title">QT游戏</div>
+                    <div class="project-img-container">
+                        <img src="./e0569430402a5be3641ad738d8b5988c.png" alt="QT游戏项目图片" class="project-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- pytorch深度学习 -->
+            <div class="project-card">
+                <div class="project-title">pytorch深度学习</div>
+                <div class="project-img-container">
+                    <img src="./a937ddd74ab137bc068e5b411da15aff.png" alt="pytorch深度学习" class="project-img">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">pytorch深度学习</div>
+                <div class="project-img-container">
+                    <img src="./947bc3ebf09b6fc0238f4e379dacd090.png" alt="pytorch深度学习" class="project-img">
+                </div>
+            </div>
+
+            <!-- FPGA设计 -->
+            <div class="md:col-span-2">
+                <div class="project-card">
+                    <div class="project-title">FPGA设计</div>
+                    <div class="project-img-container">
+                        <img src="./0884ef48cf5ff1b8761ffcc3fe6d734c_720.jpg" alt="FPGA设计项目图片" class="project-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- blender (两张图) -->
+            <div class="project-card">
+                <div class="project-title">blender图片 1</div>
+                <div class="project-img-container">
+                    <img src="./c70e07b1ac8c8cbac47fb168a02f4c9d.png" alt="blender图片1" class="project-img">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">blender图片2</div>
+                <div class="project-img-container">
+                    <img src="./8cb2928f2c2e2c38fc05e65ed9b8e3f1.png" alt="blender图片2" class="project-img">
+                </div>
+            </div>
+            <div class="md:col-span-2">
+                <div class="project-card">
+                    <div class="project-title">blender图片3</div>
+                    <div class="project-img-container">
+                        <img src="./车厢6.png" alt="blender图片3" class="project-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- stm32设计 (两张) -->
+            <div class="project-card">
+                <div class="project-title">stm32设计 1</div>
+                <div class="project-img-container">
+                    <img src="./5c5f0e38553a7abda6621c0e9425d20e_720.jpg" alt="stm32设计项目图片1" class="project-img">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">stm32设计 2</div>
+                <div class="project-img-container">
+                    <img src="" alt="stm32设计项目图片2" class="project-img">
+                </div>
+            </div>
+
+            <!-- pcb设计 (两张图) -->
+            <div class="project-card">
+                <div class="project-title">pcb设计 1</div>
+                <div class="project-img-container">
+                    <img src="./4f210cb950dfd4cc3c50fe3583faba4f.png" alt="pcb设计项目图片1" class="project-img">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">pcb设计 2</div>
+                <div class="project-img-container">
+                    <img src="./74a2a0a037be7bfd7eb1f3f8fdf96c57.png" alt="pcb设计项目图片2" class="project-img">
+                </div>
+            </div>
+
+            <!-- 长跑记录 (两张) -->
+            <div class="project-card">
+                <div class="project-title">长跑记录 1</div>
+                <div class="project-img-container">
+                    <img src="./29ae193269b6e09409d4d0fe366d7504.png" alt="长跑记录图片1" class="project-img">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">长跑记录 2</div>
+                <div class="project-img-container">
+                    <img src="./2eab87254e851c726cfdecd94418f011.png" alt="长跑记录图片2" class="project-img">
+                </div>
+            </div>
+
+            <!-- 8位处理器设计 -->
+            <div class="md:col-span-2">
+                <div class="project-card">
+                    <div class="project-title">8位处理器设计</div>
+                    <div class="project-img-container">
+                        <img src="./9d2300a769af3b9c2c4fc6415b26abf2.png" alt="8位处理器设计项目图片" class="project-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy;  项目展示 </p>
+        </div>
+    </footer>
+
+    <script>
+        // 添加页面加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.project-card');
+            
+            // 简单的淡入动画
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 + index * 100);
+            });
+        });
+
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
